@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Python package for visualizing non-linear dynamics and chaos">
+        <meta name="author" content="Víctor Loras & Unai Lería">
+        <link rel="canonical" href="https://phaseportrait.github.io/">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Phase Portrait</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Phase Portrait</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="getting_started/" class="nav-link">Getting started</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="phaseportrait2d_examples/" class="dropdown-item">2D phase portraits</a>
+</li>
+                                    
+<li>
+    <a href="trajectories_examples/" class="dropdown-item">2D & 3D trajectories</a>
+</li>
+                                    
+<li>
+    <a href="mapsandcobweb_examples/" class="dropdown-item">1D maps and cobweb plots</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="map1d/" class="dropdown-item">1D Maps</a>
+</li>
+                                    
+<li>
+    <a href="cobweb/" class="dropdown-item">Cobweb plots</a>
+</li>
+                                    
+<li>
+    <a href="dFfunction/" class="dropdown-item">dF Function</a>
+</li>
+                                    
+<li>
+    <a href="generator/" class="dropdown-item">Generator base</a>
+</li>
+                                    
+<li>
+    <a href="map/" class="dropdown-item">Map</a>
+</li>
+                                    
+<li>
+    <a href="nullclines/" class="dropdown-item">Nullclines</a>
+</li>
+                                    
+<li>
+    <a href="phaseportrait2d/" class="dropdown-item">PhasePortrait2d</a>
+</li>
+                                    
+<li>
+    <a href="rungekutta/" class="dropdown-item">Runge Kutta</a>
+</li>
+                                    
+<li>
+    <a href="slider/" class="dropdown-item">Slider</a>
+</li>
+                                    
+<li>
+    <a href="trajectory/" class="dropdown-item">Trajectory</a>
+</li>
+                                    
+<li>
+    <a href="trajectory2d/" class="dropdown-item">Trajectory2d</a>
+</li>
+                                    
+<li>
+    <a href="trajectory3d/" class="dropdown-item">Trajectory3d</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="license/" class="dropdown-item">License</a>
+</li>
+                                    
+<li>
+    <a href="contributing/" class="dropdown-item">Contributing</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="getting_started/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/Loracio/phase-portrait/edit/master/docs/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#whats-this" class="nav-link">What's this?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#authors" class="nav-link">Authors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#examples-of-use" class="nav-link">Examples of use</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="whats-this">What's this?</h1>
+<p>The idea behind this project was to create a simple way to make phase portraits in 2D and 3D, as we couldn't find something similar on the internet, so we got down to work. Eventually, we did some work on bifurcations, 1D maps and chaos.</p>
+<p>This idea came while taking a course in non linear dynamics and chaos, during the 3rd year of physics degree, brought by our desire of visualizing things and programming.</p>
+<p>We want to state that we are self-taught into making this kind of stuff, and we've tried to make things as <em>professionally</em> as possible, any comments about improving our work are welcome!</p>
+<p>At first, this project was made up in spanish. The spanish version can be found <a href="https://github.com/Loracio/retrato-de-fases">here</a>.</p>
+<h1 id="authors">Authors</h1>
+<ul>
+<li>Víctor Loras Herrero  (<a href="mailto:vhloras@gmail.com">vhloras@gmail.com</a>)</li>
+<li>Unai Lería Fortea  (<a href="mailto:unaileria@gmail.com">unaileria@gmail.com</a>)</li>
+</ul>
+<h1 id="installation">Installation</h1>
+<p><strong>Installation via pip:</strong></p>
+<blockquote>
+<p>$ pip install phaseportrait</p>
+</blockquote>
+<p><strong>Installation via git:</strong></p>
+<p>Open a terminal on desired route and type the following</p>
+<blockquote>
+<p>$ git clone https://github.com/Loracio/phase-portrait</p>
+</blockquote>
+<p><strong>Manual installation</strong></p>
+<p>Visit <a href="https://github.com/Loracio/phase-portrait">phase-portrait</a> webpage on GitHub. Click on green button saying <em>Code</em>, and download it in zip format.
+Save and unzip on desired directory.</p>
+<h1 id="examples-of-use">Examples of use</h1>
+<p><img alt="image" src="imgs/ejemplo3D.png" /></p>
+<ul>
+<li>
+<p><a href="https://github.com/Loracio/phase-portrait/examples/examples.ipynb">examples.ipynb</a>:
+Examples showing how to use <em>PhasePortrait2D</em> class.</p>
+</li>
+<li>
+<p><a href="https://github.com/Loracio/phase-portrait/examples/sliderExamples.py">sliderExamples.py</a> :
+Examples using the <em>slider</em> feature from <em>PhasePortrait2D</em> class.</p>
+</li>
+<li>
+<p><a href="https://github.com/Loracio/phase-portrait/examples/TrajectoryExamples.py">TrajectoryExamples.py</a>:
+Contains examples of 2D and 3D trajectories with and without sliders.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2021 Víctor Loras, Unai Lería</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.2.1
+Build Date UTC : 2021-07-06 17:12:34.218507+00:00
+-->

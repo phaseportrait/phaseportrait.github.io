@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Víctor Loras & Unai Lería">
+        <link rel="canonical" href="https://phaseportrait.github.io/rungekutta/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Runge Kutta - Phase Portrait</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Phase Portrait</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../getting_started/" class="nav-link">Getting started</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../phaseportrait2d_examples/" class="dropdown-item">2D phase portraits</a>
+</li>
+                                    
+<li>
+    <a href="../trajectories_examples/" class="dropdown-item">2D & 3D trajectories</a>
+</li>
+                                    
+<li>
+    <a href="../mapsandcobweb_examples/" class="dropdown-item">1D maps and cobweb plots</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../map1d/" class="dropdown-item">1D Maps</a>
+</li>
+                                    
+<li>
+    <a href="../cobweb/" class="dropdown-item">Cobweb plots</a>
+</li>
+                                    
+<li>
+    <a href="../dFfunction/" class="dropdown-item">dF Function</a>
+</li>
+                                    
+<li>
+    <a href="../generator/" class="dropdown-item">Generator base</a>
+</li>
+                                    
+<li>
+    <a href="../map/" class="dropdown-item">Map</a>
+</li>
+                                    
+<li>
+    <a href="../nullclines/" class="dropdown-item">Nullclines</a>
+</li>
+                                    
+<li>
+    <a href="../phaseportrait2d/" class="dropdown-item">PhasePortrait2d</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Runge Kutta</a>
+</li>
+                                    
+<li>
+    <a href="../slider/" class="dropdown-item">Slider</a>
+</li>
+                                    
+<li>
+    <a href="../trajectory/" class="dropdown-item">Trajectory</a>
+</li>
+                                    
+<li>
+    <a href="../trajectory2d/" class="dropdown-item">Trajectory2d</a>
+</li>
+                                    
+<li>
+    <a href="../trajectory3d/" class="dropdown-item">Trajectory3d</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../license/" class="dropdown-item">License</a>
+</li>
+                                    
+<li>
+    <a href="../contributing/" class="dropdown-item">Contributing</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../phaseportrait2d/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../slider/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/Loracio/phase-portrait/edit/master/docs/rungekutta.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#rungekutta" class="nav-link">RungeKutta</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#overwritten-methods" class="nav-link">Overwritten methods</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#methods" class="nav-link">Methods</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#examples" class="nav-link">Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="rungekutta">RungeKutta</h1>
+<blockquote>
+<p><em>class</em> phaseportrait.trajectories.<strong>RungeKutta</strong>(<em>portrait, dF, dimension, max_values, </em>, dt=0.1, dF_args=None, initial_values=None, thermalization=0*)</p>
+</blockquote>
+<p><strong>This class is used internally in Trajectories.</strong></p>
+<p>This class is an implementation of <a href="../generator/">_Generator_</a> for a Runge-Kutta 4th order data generator.</p>
+<h3 id="parameters"><strong>Parameters</strong></h3>
+<ul>
+<li>
+<p><strong>portrait</strong> : </p>
+<p>Class that uses the RungeKutta objects.</p>
+</li>
+<li>
+<p><strong>dF</strong> : callable</p>
+<p>A dF type funcion.</p>
+</li>
+<li>
+<p><strong>dimension</strong> : int</p>
+<p>Number of dimensions in which it calculates the next values. Must equal the amount of outputs the <code>dF</code>
+funcion gives.</p>
+</li>
+<li>
+<p><strong>max_values</strong> : int</p>
+<p>Max number of values saved.</p>
+</li>
+</ul>
+<h3 id="key-arguments"><strong>Key Arguments</strong></h3>
+<ul>
+<li>
+<p><strong>dt</strong> : double, optional, by default 0.1</p>
+<p>Time interval used in the Runge-Kutta 4th order method.</p>
+</li>
+<li>
+<p><strong>dF_args</strong> : dict</p>
+<p>If necesary, must contain the kargs for the <code>dF</code> funcion. By default, None.</p>
+</li>
+<li>
+<p><strong>initial_values</strong> : float, list, optional</p>
+<p>Initial set of conditions, by default None.
+If None, random initial conditions are aplied in the interval [0,1) for each coordinate.</p>
+</li>
+<li>
+<p><strong>thermalization</strong> : int, optional</p>
+<p>Thermalization steps before data is saved, by default None. 
+If None, thermalization steps are set to 0.</p>
+</li>
+</ul>
+<h1 id="overwritten-methods">Overwritten methods</h1>
+<h3 id="_generator__next"><em>_Generator_</em>.<em>_next</em></h3>
+<blockquote>
+<p><em>_Generator_</em>.<strong>_next</strong>()</p>
+</blockquote>
+<p>Generates from <code>self.position</code> its following value via the Runge-Kutta 4th order method. Explicitly:</p>
+<pre><code class="language-py">def _next(self):
+    k1 = np.array(self.dF(*(self.position), **self.dF_args))
+    k2 = np.array(self.dF(*(self.position+0.5*k1*self.dt), **self.dF_args))
+    k3 = np.array(self.dF(*(self.position+0.5*k2*self.dt), **self.dF_args))
+    k4 = np.array(self.dF(*(self.position+k3*self.dt), **self.dF_args))
+    self.velocity = 1/6*(k1+2*k2+2*k3+k4)
+    self.position += self.velocity*self.dt
+</code></pre>
+<p><strong>Returns</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<h3 id="_generator_save"><em>_Generator_</em>.<em>save</em></h3>
+<blockquote>
+<p><em>_Generator_</em>.<strong>save</strong>(i)</p>
+</blockquote>
+<p>Saves <code>self.position</code> in the attribute <code>self.positions</code>, and <code>self.velocity</code> in <code>self.velocities</code>.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li>
+<p><strong>i</strong> : int</p>
+<p>Index in which the data is saved.</p>
+</li>
+</ul>
+<p>Explicitly:</p>
+<pre><code class="language-py">def save(self, i):
+    try:
+        self.positions[:, i] = self.position
+        self.velocities[:, i] = self.velocity
+    except IndexError:
+        np.concatenate(self.positions, self._create_values_array(), axis=1)
+        np.concatenate(self.velocities, self._create_values_array(), axis=1)
+        self.max_values += 2000
+        self.save(i)
+</code></pre>
+<p><strong>Returns</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<h3 id="_generator_clear_values"><em>_Generator_</em>.<em>clear_values</em></h3>
+<blockquote>
+<p><em>_Generator_</em>.<strong>clear_values</strong>()</p>
+</blockquote>
+<p>Clears the data arrays <code>self.positions</code> and <code>self.velocities</code>.</p>
+<p><strong>Returns</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<h1 id="methods">Methods</h1>
+<h3 id="_generator_instance_and_compute_all"><em>_Generator_</em>.instance_and_compute_all</h3>
+<blockquote>
+<p><em>_Generator_</em>.<strong>instance_and_compute_all</strong>(portrait, dF, dimension, dF_args, initial_values, max_values, save_freq=1, dt=0.1, thermalization=0)</p>
+</blockquote>
+<p>Creates an instance of phase-portrait.trajectories.RungeKutta. Computes all the data requested and returns the instance.</p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li>
+<p>portrait : </p>
+<p>Class that uses the RungeKutta objects.</p>
+</li>
+<li>
+<p>dF : callable</p>
+<p>A dF type funcion.</p>
+</li>
+<li>
+<p>dimension : int</p>
+<p>Number of dimensions in which it calculates the next values. Must equal the amount of outputs the <code>dF</code>
+funcion gives.</p>
+</li>
+<li>
+<p>dF_args : dict</p>
+<p>If necesary, must contain the kargs for the <code>dF</code> funcion. By default, None.</p>
+</li>
+<li>
+<p>initial_values : float, list, optional</p>
+<p>Initial set of conditions, by default None.
+If None, random initial conditions are aplied in the interval [0,1) for each coordinat</p>
+</li>
+<li>
+<p>max_values : int</p>
+<p>Max number of values saved.</p>
+</li>
+<li>
+<p>save_freq : int, optional, by default 1</p>
+<p>Number of values computed before saving them.</p>
+</li>
+<li>
+<p>dt : double, by default 0.1</p>
+<p>Time interval used in the Runge-Kutta 4th order method.</p>
+</li>
+<li>
+<p>thermalization : int, optional</p>
+<p>Thermalization steps before data is saved, by default None. 
+If None, thermalization steps are set to 0.</p>
+</li>
+</ul>
+<p><strong>Returns</strong></p>
+<ul>
+<li>phase-portrait.trajectories.RungeKutta</li>
+</ul>
+<h1 id="examples">Examples</h1>
+<p>There are examples of how to implement this class in the folowing files:</p>
+<ul>
+<li><a href="../trajectory/"><code>phase-portrait/trajectories/trajectory.py</code></a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright © 2021 Víctor Loras, Unai Lería</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
