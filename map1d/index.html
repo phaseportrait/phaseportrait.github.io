@@ -37,7 +37,7 @@
                                 <a href="../installation/" class="nav-link">Installation</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -187,7 +187,7 @@
 </li>
 <li>
 <p><strong>n_points</strong> : int</p>
-<p>Maximum number of points</p>
+<p>Maximum number of points. Not recomended more than 5000.</p>
 </li>
 </ul>
 <h3 id="key-arguments">Key Arguments</h3>
@@ -353,19 +353,25 @@
 <li>tuple: <code>(matplotlib.pyplot.figure, matplotlib.pyplot.Axis)</code></li>
 </ul>
 <h1 id="examples">Examples</h1>
+<h3 id="logistic-map">Logistic map</h3>
+<p>Let's represent the Logistic map over the control parameter <strong>r</strong>, in the range <code>[2, 3.9]</code>, with an interval of <code>0.005</code>.</p>
 <pre><code class="language-py">def Logistic(x, *, r=1.5):
     return r*x*(1-x)
 
-# Create an instance of Map1D
-Logistic_Map = Map1D(Logistic, [2,3.9], [0,1], 5000, thermalization=50, size=0.05)
+Logistic_Map = Map1D(Logistic, [2,3.9], [0,1], 2000, thermalization=200, size=0.1)
 
-# We want to plot for r in the range 0 &lt; r &lt; 4, every 0.0005
-Logistic_Map.plot_over_variable('r', [0,4], 0.0005)
+# We add a limit cycle check because until r=3.5 there is not need of storing 2000 equal points for every r.
 
-# Plot
+Logistic_Map.plot_over_variable('r', [2,3.9], 0.005, 
+    limit_cycle_check_first=300, delta_cycle_check=0.01
+    )
+
 fig, ax = Logistic_Map.plot()
 </code></pre>
-<p><img alt="image" src="../imgs/map_example.png" /></p></div>
+<p><img alt="image" src="../imgs/doc_examples/map_example.png" /></p>
+<ul>
+<li><a href="../mapsandcobweb_examples/">See more Map1D examples.</a></li>
+</ul></div>
             </div>
         </div>
 

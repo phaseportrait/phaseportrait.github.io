@@ -37,7 +37,7 @@
                                 <a href="../installation/" class="nav-link">Installation</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -211,8 +211,8 @@
 <p>Number of times <code>dF</code> is aplied between positions saved, by default 1</p>
 </li>
 <li>
-<p><strong>xlabel</strong> : str
-    x label of the plot, by default 'X'</p>
+<p><strong>xlabel</strong> : str</p>
+<p>x label of the plot, by default 'X'</p>
 </li>
 <li>
 <p><strong>ylabel</strong> : str</p>
@@ -257,28 +257,54 @@ Returns the axis and the figure.</p>
 </li>
 </ol>
 <h1 id="examples">Examples</h1>
+<h3 id="lorentz-attractor-chaos">Lorentz attractor: chaos</h3>
+<p>Two trajectories with similar initial positions under the influence of Lorentz equations.</p>
 <pre><code class="language-python">from phaseportrait import Trajectories3D
 
 def Lorenz(x,y,z,*, s=10, r=28, b=8/3):
-    return -s*x+s*y, -x*z+r*x-y, x*y-b*z
+    return  -s*x+s*y, 
+            -x*z+r*x-y, 
+            x*y-b*z
 
-a = Trajectory3D(Lorenz, lines=True, n_points=1300, size=3, mark_start_position=True, Title='Nearby IC on Lorenz attractor')
+a = Trajectory3D(
+    Lorenz, 
+    lines=True, 
+    n_points=1300, 
+    size=3, 
+    mark_start_position=True, 
+    Title='Nearby IC on Lorenz attractor'
+    )
+
 a.initial_position(10,10,10)
 a.initial_position(10,10,10.0001)
 a.plot()
 </code></pre>
-<p><img alt="image" src="../imgs/trj3d_example.png" /></p>
+<p><img alt="image" src="../imgs/doc_examples/trj3d_example.png" /></p>
+<h3 id="halvorsen-attractor">Halvorsen attractor</h3>
+<p>In this example we are interested in seeing the attractor, not trajectories, under the Halvorsen equations.</p>
 <pre><code class="language-python">from phaseportrait import Trajectories3D
 
 def Halvorsen(x,y,z, *, s=1.4):
-        delta = (3*s+15)
-        return -s*x+2*y-4*z-y**2+delta , -s*y+2*z-4*x-z**2+delta, -s*z+2*x-4*y-x**2+delta
+    delta = (3*s+15)
+    return  -s*x+2*y-4*z-y**2+delta, 
+            -s*y+2*z-4*x-z**2+delta, 
+            -s*z+2*x-4*y-x**2+delta
 
-    d = Trajectory3D(Halvorsen, dF_args={'s':1.4}, n_points=10000, thermalization=0, numba=True, size=2, mark_start_point=True, Title='Halvorsen attractor')
-    d.initial_position(0,5,10)
-    d.plot()
+d = Trajectory3D(
+    Halvorsen, 
+    dF_args={'s':1.4}, 
+    n_points=10000, 
+    thermalization=0, 
+    numba=True, 
+    size=2, 
+    mark_start_point=True, 
+    Title='Halvorsen attractor'
+    )
+
+d.initial_position(0,5,10)
+d.plot()
 </code></pre>
-<p><img alt="image" src="../imgs/trj3d_example_2.png" /></p></div>
+<p><img alt="image" src="../imgs/doc_examples/trj3d_example_2.png" /></p></div>
             </div>
         </div>
 
