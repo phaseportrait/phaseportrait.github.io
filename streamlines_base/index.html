@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Víctor Loras & Unai Lería" /><link rel="canonical" href="https://phaseportrait.github.io/streamlines_base/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Streamlines - Phase Portrait</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Streamlines";
+        var mkdocs_page_input_path = "streamlines_base.md";
+        var mkdocs_page_url = "/streamlines_base/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Phase Portrait
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../phaseportrait2d_examples/">2D phase portraits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trajectories_examples/">2D & 3D trajectories</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mapsandcobweb_examples/">1D maps and cobweb plots</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../map1d/">1D Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cobweb/">Cobweb plots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dFfunction/">dF function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../generator/">Generator base</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../map/">Map</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../nullclines/">Nullclines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../phaseportrait2d/">PhasePortrait2d</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../phaseportrait3d/">PhasePortrait3d</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rungekutta/">Runge Kutta</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../slider/">Slider</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Streamlines</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-arguments">Key Arguments</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trajectory2d/">Trajectory2d</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trajectory3d/">Trajectory3d</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Phase Portrait</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Documentation &raquo;</li><li>Streamlines</li>
+    <li class="wy-breadcrumbs-aside">
+        <a href="https://github.com/phaseportrait/phaseportrait/edit/master/docs/streamlines_base.md"
+          class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="streamlines_base2d">Streamlines_base2D</h1>
+<p><em>class</em> phaseportrait.streamlines.<strong>Streamlines_base2D</strong>(<em>dF, X, Y, maxLen=500, deltat=0.01, </em>, dF_args=None, polar=False, density=1, scypi_odeint=False, **kargs*)</p>
+<p>Compute a set of streamlines given velocity function <code>dF</code>.</p>
+<h3 id="parameters"><strong>Parameters</strong></h3>
+<ul>
+<li>
+<p><strong>dF</strong> : callable</p>
+<p>A dF type funcion. Computes the derivatives of given coordinates.</p>
+</li>
+<li>
+<p><strong>X and Y</strong> : 1D or 2D arrays</p>
+<p>Arrays of the grid points. The mesh spacing is assumed to be uniform in each dimension.</p>
+</li>
+<li>
+<p><strong>maxLen</strong> : int, default=500</p>
+<p>The maximum length of an individual streamline segment.</p>
+</li>
+<li>
+<p><strong>polar</strong> : bool, default=false</p>
+<p>Whether to use polar coordinates or not.</p>
+</li>
+<li>
+<p><strong>density</strong> : int, default=1</p>
+<p>Density of mask grid. Used for making the stream lines not collide.</p>
+</li>
+<li>
+<p><strong>scypi_odeint</strong> : bool, default=False</p>
+<p>Use scipy.odeint for integration. If <code>False</code> Runge-Kutta 3rd order is used.</p>
+</li>
+</ul>
+<h3 id="key-arguments"><strong>Key Arguments</strong></h3>
+<pre><code>    --------
+    dF_args: dict|None, default=None
+        dF_args of `dF` function.
+</code></pre>
+<h1 id="streamlines_based3">Streamlines_baseD3</h1>
+<p><em>class</em> phaseportrait.streamlines.<strong>Streamlines_baseD3</strong>(<em>dF, X, Y, Z, maxLen=500, deltat=0.01, </em>, dF_args=None, polar=False, density=1, scypi_odeint=False, **kargs*)</p>
+<p>Compute a set of streamlines given velocity function <code>dF</code>.</p>
+<h3 id="parameters_1"><strong>Parameters</strong></h3>
+<ul>
+<li>
+<p><strong>dF</strong> : callable</p>
+<p>A dF type funcion. Computes the derivatives of given coordinates.</p>
+</li>
+<li>
+<p><strong>X, Y and Z</strong> : 1D or 2D arrays</p>
+<p>Arrays of the grid points. The mesh spacing is assumed to be uniform in each dimension.</p>
+</li>
+<li>
+<p><strong>maxLen</strong> : int, default=500</p>
+<p>The maximum length of an individual streamline segment.</p>
+</li>
+<li>
+<p><strong>polar</strong> : bool, default=false</p>
+<p>Whether to use polar coordinates or not.</p>
+</li>
+<li>
+<p><strong>density</strong> : int, default=1</p>
+<p>Density of mask grid. Used for making the stream lines not collide.</p>
+</li>
+<li>
+<p><strong>scypi_odeint</strong> : bool, default=False</p>
+<p>Use scipy.odeint for integration. If <code>False</code> Runge-Kutta 3rd order is used.</p>
+</li>
+</ul>
+<h3 id="key-arguments_1"><strong>Key Arguments</strong></h3>
+<pre><code>    --------
+    dF_args: dict|None, default=None
+        dF_args of `dF` function.
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../slider/" class="btn btn-neutral float-left" title="Slider"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../trajectory/" class="btn btn-neutral float-right" title="Trajectory">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2021 Víctor Loras, Unai Lería</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/phaseportrait/phaseportrait/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../slider/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../trajectory/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
