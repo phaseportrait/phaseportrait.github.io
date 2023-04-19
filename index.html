@@ -1354,46 +1354,70 @@
   
 
 
+<p><a href="https://pypi.org/project/phaseportrait/"><img alt="PyPI Downloads" src="https://img.shields.io/pypi/dm/phaseportrait.svg?label=downloads" /></a>
+<a href="https://pypi.org/project/phaseportrait/"><img alt="PyPI Version" src="https://img.shields.io/pypi/v/phaseportrait?" /></a></p>
+<p><img alt="Commit activity" src="https://img.shields.io/github/commit-activity/m/phaseportrait/phaseportrait" />
+<a href="LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/phaseportrait" /></a>
+<a href="https://github.com/phaseportrait/phaseportrait/actions"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/phaseportrait/phaseportrait/ci.yml" /></a></p>
+<p><a href="https://pypi.org/project/phaseportrait/"><img alt="Python Version" src="https://img.shields.io/pypi/pyversions/phaseportrait" /></a>
+<a href="https://pypi.org/project/phaseportrait/"><img alt="Wheel" src="https://img.shields.io/pypi/wheel/phaseportrait" /></a></p>
+<p><br></br></p>
+<div align="center">
+
+<a href="https://phaseportrait.github.io/">
+<img src="https://github.com/phaseportrait/phaseportrait/raw/master/docs/img/duckduck.png" width=40%>
+</img>
+</a>
+<a href="https://github.com/phaseportrait/phaseportrait-gui">
+<img src="https://github.com/phaseportrait/phaseportrait/raw/master/docs/img/duckduck_son.png" width=30%>
+</a>
+
+<br></br>
+
+<a href="https://phaseportrait.github.io/">
+<img src=https://img.shields.io/github/deployments/phaseportrait/phaseportrait/github-pages?label=Documentation>
+</a>
+
+</div>
+
+<p><br></br></p>
+<pre><code class="language-py">from matplotlib import pyplot
+import numpy
+
+import phaseportrait
+
+def pendulum(θ, dθ):
+    return dθ, - numpy.sin(θ)
+
+SimplePendulum = phaseportrait.PhasePortrait2D(pendulum, [-9, 9], Title='Simple pendulum', xlabel=r&quot;$\Theta$&quot;, ylabel=r&quot;$\dot{\Theta}$&quot;)
+SimplePendulum.plot()
+</code></pre>
+<div align="center">
+<a href="https://phaseportrait.github.io/reference/legacy/phaseportrait2d_examples/">
+<img src="https://github.com/phaseportrait/phaseportrait/raw/master/docs/imgs/index/pendulum_example.png" width=49.45%><img src="https://github.com/phaseportrait/phaseportrait/raw/master/docs/imgs/index/damped_pendulum_example.png" width=50%>
+</a>
+
+<a href="https://phaseportrait.github.io/reference/legacy/phaseportrait3d/">
+<img src="https://github.com/phaseportrait/phaseportrait/raw/master/docs/imgs/pp3d_examples/example.png">
+</a>
+
+
+<a href="https://phaseportrait.github.io/reference/legacy/trajectories_examples/">
+<img src="https://github.com/phaseportrait/phaseportrait/raw/master/docs/imgs/trj_examples/Figure_7.png">
+</a>
+
+
+
+
+
+<a href="https://phaseportrait.github.io/reference/legacy/mapsandcobweb_examples/">
+<img src="https://github.com/phaseportrait/phaseportrait/raw/master/docs/imgs/index/map_example_code.png">
+</a>.
+
+</div>
+
 <h1 id="documentation">Documentation</h1>
-<p>To check out <em>phaseportrait</em>'s documentation, view some examples and read more about it, check our website or try our Graphical User Interface:</p>
-<p><a href="https://phaseportrait.github.io/">
-<center>
-<img src="img/duckduck.png" width=40%>
-</img></p>
-<!-- </center> -->
-<p></a>
-<a href="https://github.com/phaseportrait/phaseportrait-gui"></p>
-<!-- <center> -->
-<p><img src="img/duckduck_son.png" width=30%>
-</center>
-</a></p>
-<p><a href="https://phaseportrait.github.io/">Documentation</a></p>
-<p><a href="https://github.com/phaseportrait/phaseportrait-gui">Graphical User Interface</a></p>
-<h1 id="examples-of-use">Examples of use</h1>
-<p><a href="https://phaseportrait.github.io/trajectories_examples/">
-<center><img src="imgs/trj_examples/Figure_7.png"></center>
-</a></p>
-<p><a href="https://phaseportrait.github.io/phaseportrait2d_examples/">
-<center><img src="imgs/index/pendulum_example.png" width=60%><img src="imgs/index/damped_pendulum_example.png" width=60%></center>
-</a></p>
-<p><a href="https://phaseportrait.github.io/phaseportrait3d/">
-<center><img src="imgs/pp3d_examples/example.png"></center>
-</a></p>
-<p><a href="https://phaseportrait.github.io/mapsandcobweb_examples/">
-<center><img src="imgs/index/map_example_code.png"></center>
-</a></p>
-<h1 id="installation">Installation</h1>
-<p><strong>Installing via pip:</strong></p>
-<p>Phaseportrait releases are available as wheel packages for macOS, Windows and Linux on PyPI. Install it using pip:</p>
-<pre><code>$ pip install phaseportrait
-</code></pre>
-<p><strong>Installing from source:</strong></p>
-<p>Open a terminal on desired route and type the following:</p>
-<pre><code>$ git clone https://github.com/phaseportrait/phaseportrait
-</code></pre>
-<p><strong>Manual installation</strong></p>
-<p>Visit <a href="https://github.com/phaseportrait/phaseportrait">phase-portrait</a> webpage on GitHub. Click on green button saying <em>Code</em>, and download it in zip format.
-Save and unzip on desired directory.</p>
+<p>To check out <a href="https://phaseportrait.github.io/"><em>phaseportrait</em>'s documentation</a>, view some examples and read more about it, check our website or try our <a href="https://github.com/phaseportrait/phaseportrait-gui">Graphical User Interface</a>!</p>
 <h1 id="whats-this">What's this?</h1>
 <p>The idea behind this project was to create a simple way to make phase portraits in 2D and 3D in Python, as we couldn't find something similar on the internet, so we got down to work. (Update: found <a href="https://github.com/jmoy/plotdf">jmoy/plotdf</a>, offers similar 2D phase plots but it is very limited).</p>
 <p>Eventually, we did some work on bifurcations, 1D maps and chaos in 3D trayectories.</p>
