@@ -1639,8 +1639,7 @@ example.plot()
 
         <details class="quote">
           <summary>Source code in <code>phaseportrait/PhasePortrait2D.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 15</span>
-<span class="normal"> 16</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 16</span>
 <span class="normal"> 17</span>
 <span class="normal"> 18</span>
 <span class="normal"> 19</span>
@@ -1947,7 +1946,9 @@ example.plot()
 <span class="normal">320</span>
 <span class="normal">321</span>
 <span class="normal">322</span>
-<span class="normal">323</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PhasePortrait2D</span><span class="p">:</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PhasePortrait2D</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Makes a phase portrait of a 2D system.</span>
 
@@ -2164,13 +2165,14 @@ example.plot()
 
 
 
-    <span class="k">def</span> <span class="nf">add_nullclines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">xRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">add_nullclines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">xRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds nullclines for both axis.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            precision (float, optional): Precision if not specific axis precision is specified. Defaults to 0.01.</span>
 <span class="sd">            xprecision (float, optional): Precision for x axis nullcline. Defaults to None.</span>
 <span class="sd">            yprecision (float, optional): Precision for y axis nullcline. Defaults to None.</span>
+<span class="sd">            show (Literal[&#39;x&#39;, &#39;y&#39;, None], optinal) : Used to show only x or y nullclines, both if None. Defaults to None.</span>
 <span class="sd">            offset (float, optional): Specifies the value in which the countours will be drawn. Defaults to 0.</span>
 <span class="sd">            density (int, optional): Density of grid used in interpolation. Defaults to 50.</span>
 <span class="sd">            xRange (list[float], optional): Range of x nullcline, by default global range. Defaults to None.</span>
@@ -2182,7 +2184,7 @@ example.plot()
 <span class="sd">            alpha (int, optional): Alpha of nullclines and background. Defaults to 0.</span>
 <span class="sd">        &quot;&quot;&quot;</span>        
         <span class="bp">self</span><span class="o">.</span><span class="n">nullclines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Nullcline2D</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dF</span><span class="p">,</span>
-                                          <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="n">xprecision</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="n">yprecision</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span> 
+                                          <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="n">xprecision</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="n">yprecision</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span> 
                                           <span class="n">xRange</span><span class="o">=</span><span class="n">xRange</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="n">yRange</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="n">dF_args</span><span class="p">,</span> 
                                           <span class="n">xcolor</span><span class="o">=</span><span class="n">xcolor</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="n">ycolor</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="n">bgcolor</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">Polar</span><span class="p">))</span>
 
@@ -2441,8 +2443,7 @@ example.plot()
 
       <details class="quote">
         <summary>Source code in <code>phaseportrait/PhasePortrait2D.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 55</span>
-<span class="normal"> 56</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 56</span>
 <span class="normal"> 57</span>
 <span class="normal"> 58</span>
 <span class="normal"> 59</span>
@@ -2495,7 +2496,8 @@ example.plot()
 <span class="normal">106</span>
 <span class="normal">107</span>
 <span class="normal">108</span>
-<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dF</span><span class="p">,</span> <span class="n">Range</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">MeshDim</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="p">{},</span> <span class="n">Density</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Polar</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Phase Portrait&#39;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">dot</span><span class="si">{X}</span><span class="s2">$&quot;</span><span class="p">,</span> 
+<span class="normal">109</span>
+<span class="normal">110</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dF</span><span class="p">,</span> <span class="n">Range</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">MeshDim</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="p">{},</span> <span class="n">Density</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Polar</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Phase Portrait&#39;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">dot</span><span class="si">{X}</span><span class="s2">$&quot;</span><span class="p">,</span> 
              <span class="n">color</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="n">xScale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">yScale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">maxLen</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">odeint_method</span><span class="o">=</span><span class="s2">&quot;scipy&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;PhasePortrait2D</span>
 
@@ -2561,7 +2563,7 @@ example.plot()
 
 
 <h3 id="phaseportrait.PhasePortrait2D.PhasePortrait2D.add_nullclines" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_nullclines</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">xRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">add_nullclines</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">xRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
 </h3>
 
@@ -2607,6 +2609,16 @@ example.plot()
                 <code>float</code>
           </td>
           <td><p>Precision for y axis nullcline. Defaults to None.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>show</code></td>
+          <td>
+                <code>Literal[&#39;x&#39;, &#39;y&#39;, None], optinal) </code>
+          </td>
+          <td><p>Used to show only x or y nullclines, both if None. Defaults to None.</p></td>
           <td>
                 <code>None</code>
           </td>
@@ -2706,8 +2718,7 @@ example.plot()
 
       <details class="quote">
         <summary>Source code in <code>phaseportrait/PhasePortrait2D.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">232</span>
-<span class="normal">233</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">233</span>
 <span class="normal">234</span>
 <span class="normal">235</span>
 <span class="normal">236</span>
@@ -2726,13 +2737,16 @@ example.plot()
 <span class="normal">249</span>
 <span class="normal">250</span>
 <span class="normal">251</span>
-<span class="normal">252</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">add_nullclines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">xRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">add_nullclines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">xRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds nullclines for both axis.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        precision (float, optional): Precision if not specific axis precision is specified. Defaults to 0.01.</span>
 <span class="sd">        xprecision (float, optional): Precision for x axis nullcline. Defaults to None.</span>
 <span class="sd">        yprecision (float, optional): Precision for y axis nullcline. Defaults to None.</span>
+<span class="sd">        show (Literal[&#39;x&#39;, &#39;y&#39;, None], optinal) : Used to show only x or y nullclines, both if None. Defaults to None.</span>
 <span class="sd">        offset (float, optional): Specifies the value in which the countours will be drawn. Defaults to 0.</span>
 <span class="sd">        density (int, optional): Density of grid used in interpolation. Defaults to 50.</span>
 <span class="sd">        xRange (list[float], optional): Range of x nullcline, by default global range. Defaults to None.</span>
@@ -2744,7 +2758,7 @@ example.plot()
 <span class="sd">        alpha (int, optional): Alpha of nullclines and background. Defaults to 0.</span>
 <span class="sd">    &quot;&quot;&quot;</span>        
     <span class="bp">self</span><span class="o">.</span><span class="n">nullclines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Nullcline2D</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dF</span><span class="p">,</span>
-                                      <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="n">xprecision</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="n">yprecision</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span> 
+                                      <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">,</span> <span class="n">xprecision</span><span class="o">=</span><span class="n">xprecision</span><span class="p">,</span> <span class="n">yprecision</span><span class="o">=</span><span class="n">yprecision</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="n">show</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">density</span><span class="p">,</span> 
                                       <span class="n">xRange</span><span class="o">=</span><span class="n">xRange</span><span class="p">,</span> <span class="n">yRange</span><span class="o">=</span><span class="n">yRange</span><span class="p">,</span> <span class="n">dF_args</span><span class="o">=</span><span class="n">dF_args</span><span class="p">,</span> 
                                       <span class="n">xcolor</span><span class="o">=</span><span class="n">xcolor</span><span class="p">,</span> <span class="n">ycolor</span><span class="o">=</span><span class="n">ycolor</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="n">bgcolor</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">Polar</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
@@ -2822,9 +2836,7 @@ example.plot()
 
       <details class="quote">
         <summary>Source code in <code>phaseportrait/PhasePortrait2D.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">258</span>
 <span class="normal">259</span>
 <span class="normal">260</span>
 <span class="normal">261</span>
@@ -2837,7 +2849,9 @@ example.plot()
 <span class="normal">268</span>
 <span class="normal">269</span>
 <span class="normal">270</span>
-<span class="normal">271</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">add_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_name</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">valstep</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">valinterval</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">add_slider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param_name</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">valstep</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">valinterval</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Adds a slider which can change the value of a parameter in execution time.</span>
 
@@ -2899,8 +2913,7 @@ example.plot()
 
       <details class="quote">
         <summary>Source code in <code>phaseportrait/PhasePortrait2D.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">168</span>
-<span class="normal">169</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">169</span>
 <span class="normal">170</span>
 <span class="normal">171</span>
 <span class="normal">172</span>
@@ -2910,7 +2923,8 @@ example.plot()
 <span class="normal">176</span>
 <span class="normal">177</span>
 <span class="normal">178</span>
-<span class="normal">179</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toggle</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="normal">179</span>
+<span class="normal">180</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">toggle</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a colrobar for speed.</span>
 
 <span class="sd">    Args:</span>
@@ -2996,8 +3010,7 @@ example.plot()
 
       <details class="quote">
         <summary>Source code in <code>phaseportrait/PhasePortrait2D.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">181</span>
-<span class="normal">182</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">182</span>
 <span class="normal">183</span>
 <span class="normal">184</span>
 <span class="normal">185</span>
@@ -3043,7 +3056,8 @@ example.plot()
 <span class="normal">225</span>
 <span class="normal">226</span>
 <span class="normal">227</span>
-<span class="normal">228</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">draw_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="normal">228</span>
+<span class="normal">229</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">draw_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Draws the streamplot. Is internaly uesd by method `plot`.</span>
 
 <span class="sd">    Args:</span>
@@ -3165,8 +3179,7 @@ example.plot()
 
       <details class="quote">
         <summary>Source code in <code>phaseportrait/PhasePortrait2D.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">138</span>
-<span class="normal">139</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">139</span>
 <span class="normal">140</span>
 <span class="normal">141</span>
 <span class="normal">142</span>
@@ -3193,7 +3206,8 @@ example.plot()
 <span class="normal">163</span>
 <span class="normal">164</span>
 <span class="normal">165</span>
-<span class="normal">166</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="normal">166</span>
+<span class="normal">167</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Prepares th plots and computes the values</span>
 
 <span class="sd">    Args:</span>
