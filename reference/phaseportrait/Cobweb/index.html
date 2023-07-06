@@ -21,7 +21,7 @@
         <link rel="next" href="../Map1D/">
       
       <link rel="icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -118,25 +118,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
           
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
+              </label>
+            
           
-        
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -2075,7 +2081,11 @@ limitations under the License. -->
           <td>
                 <code>function) </code>
           </td>
-          <td><p>Map function, which returns value given a point and some parameters.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Map function, which returns value given a point and some parameters.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2085,7 +2095,11 @@ limitations under the License. -->
           <td>
                 <code>float) </code>
           </td>
-          <td><p>Initial position for iterating the map.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Initial position for iterating the map.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2095,7 +2109,11 @@ limitations under the License. -->
           <td>
                 <code>float or list) </code>
           </td>
-          <td><p>Range of representation on x axis.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Range of representation on x axis.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2105,7 +2123,11 @@ limitations under the License. -->
           <td>
                 <code>dict, optional) </code>
           </td>
-          <td><p>Dictionary with parameters for <code>dF</code> function.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary with parameters for <code>dF</code> function.</p>
+            </div>
+          </td>
           <td>
                 <code>{}</code>
           </td>
@@ -2115,7 +2137,11 @@ limitations under the License. -->
           <td>
                 <code>float or list, optional) </code>
           </td>
-          <td><p>Range of representation on y axis.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Range of representation on y axis.</p>
+            </div>
+          </td>
           <td>
                 <code>[]</code>
           </td>
@@ -2125,7 +2151,11 @@ limitations under the License. -->
           <td>
                 <code>int, optional) </code>
           </td>
-          <td><p>Number of iterations of the map.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of iterations of the map.</p>
+            </div>
+          </td>
           <td>
                 <code>100</code>
           </td>
@@ -2135,7 +2165,11 @@ limitations under the License. -->
           <td>
                 <code>int, optional) </code>
           </td>
-          <td><p>Number of points to plot the map.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of points to plot the map.</p>
+            </div>
+          </td>
           <td>
                 <code>10000</code>
           </td>
@@ -2145,7 +2179,11 @@ limitations under the License. -->
           <td>
                 <code>str, optional) </code>
           </td>
-          <td><p>x axis label in the plot. Default value is <code>r'$X_{n}$'</code></p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>x axis label in the plot. Default value is <code>r'$X_{n}$'</code></p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2155,7 +2193,11 @@ limitations under the License. -->
           <td>
                 <code>str, optional) </code>
           </td>
-          <td><p>y axis label in the plot. Default value is <code>r'$X_{n+1}$'</code></p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>y axis label in the plot. Default value is <code>r'$X_{n+1}$'</code></p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2165,7 +2207,11 @@ limitations under the License. -->
           <td>
                 <code>str, optional) </code>
           </td>
-          <td><p>title of the plot. Default value is <code>'Cobweb plot'</code>.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>title of the plot. Default value is <code>'Cobweb plot'</code>.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2294,7 +2340,11 @@ limitations under the License. -->
           <td>
                 <code>str) </code>
           </td>
-          <td><p>The string key of the variable. Must be the same as the key in the <code>dF</code> function.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>The string key of the variable. Must be the same as the key in the <code>dF</code> function.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2304,7 +2354,11 @@ limitations under the License. -->
           <td>
                 <code>float) </code>
           </td>
-          <td><p>Initial value of the parameter.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Initial value of the parameter.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2314,7 +2368,11 @@ limitations under the License. -->
           <td>
                 <code>Union[float, list]) </code>
           </td>
-          <td><p>The range of values the slider of the parameter will cover.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>The range of values the slider of the parameter will cover.</p>
+            </div>
+          </td>
           <td>
                 <code>10</code>
           </td>
@@ -2324,7 +2382,11 @@ limitations under the License. -->
           <td>
                 <code>float) </code>
           </td>
-          <td><p>Precision in the slider.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Precision in the slider.</p>
+            </div>
+          </td>
           <td>
                 <code>0.1</code>
           </td>
@@ -2399,7 +2461,11 @@ limitations under the License. -->
           <td>
                 <code>float, optional) </code>
           </td>
-          <td><p>Initial position. Default value is the same as initial position given when initializing Cobweb object.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Initial position. Default value is the same as initial position given when initializing Cobweb object.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2409,7 +2475,11 @@ limitations under the License. -->
           <td>
                 <code>Union[float, list]) </code>
           </td>
-          <td><p>The range of values the slider of the parameter will cover.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>The range of values the slider of the parameter will cover.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2419,7 +2489,11 @@ limitations under the License. -->
           <td>
                 <code>float) </code>
           </td>
-          <td><p>Precision in the slider.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Precision in the slider.</p>
+            </div>
+          </td>
           <td>
                 <code>0.05</code>
           </td>
@@ -2493,7 +2567,11 @@ limitations under the License. -->
           <td>
                 <code>tuple[matplotlib Figure (Cobweb plot), matplotlib Axis (Cobweb plot), matplotlib Figure (Time series), matplotlib Axis (Time series)]</code>
           </td>
-          <td></td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
         </tr>
     </tbody>
   </table>
@@ -2700,10 +2778,10 @@ limitations under the License. -->
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>

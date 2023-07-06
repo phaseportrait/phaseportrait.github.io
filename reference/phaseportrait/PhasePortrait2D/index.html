@@ -21,7 +21,7 @@
         <link rel="next" href="../PhasePortrait3D/">
       
       <link rel="icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -118,25 +118,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
           
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
+              </label>
+            
           
-        
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -2303,7 +2309,11 @@ example.plot()
           <td>
                 <code>callable</code>
           </td>
-          <td><p>A dF type function.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>A dF type function.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2313,7 +2323,11 @@ example.plot()
           <td>
                 <code>[x_range, y_range]</code>
           </td>
-          <td><p>Ranges of the axis in the main plot.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Ranges of the axis in the main plot.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2323,7 +2337,11 @@ example.plot()
           <td>
                 <code>int</code>
           </td>
-          <td><p>Number of elements in the arrows grid. Defaults to 30.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of elements in the arrows grid. Defaults to 30.</p>
+            </div>
+          </td>
           <td>
                 <code>30</code>
           </td>
@@ -2333,7 +2351,11 @@ example.plot()
           <td>
                 <code>dict</code>
           </td>
-          <td><p>If necesary, must contain the kargs for the <code>dF</code> function. Defaults to {}.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>If necesary, must contain the kargs for the <code>dF</code> function. Defaults to {}.</p>
+            </div>
+          </td>
           <td>
                 <code>{}</code>
           </td>
@@ -2343,7 +2365,11 @@ example.plot()
           <td>
                 <code>int</code>
           </td>
-          <td><p>[Deprecated] Number of elements in the arrows grid plot. Defaults to 1.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>[Deprecated] Number of elements in the arrows grid plot. Defaults to 1.</p>
+            </div>
+          </td>
           <td>
                 <code>1</code>
           </td>
@@ -2353,7 +2379,11 @@ example.plot()
           <td>
                 <code>bool</code>
           </td>
-          <td><p>Whether to use polar coordinates or not. Defaults to False.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use polar coordinates or not. Defaults to False.</p>
+            </div>
+          </td>
           <td>
                 <code>False</code>
           </td>
@@ -2363,7 +2393,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>title of the plot. Defaults to 'Phase Portrait'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>title of the plot. Defaults to 'Phase Portrait'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;Phase Portrait&#39;</code>
           </td>
@@ -2373,7 +2407,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>x label of the plot. Defaults to 'X'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>x label of the plot. Defaults to 'X'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;X&#39;</code>
           </td>
@@ -2383,7 +2421,11 @@ example.plot()
           <td>
                 <code>regexp</code>
           </td>
-          <td><p>y label of the plot. Defaults to r"$\dot{X}$".</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>y label of the plot. Defaults to r"$\dot{X}$".</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;$\\dot{X}$&#39;</code>
           </td>
@@ -2393,7 +2435,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>Matplotlib <code>Cmap</code>. Defaults to 'rainbow'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Matplotlib <code>Cmap</code>. Defaults to 'rainbow'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;rainbow&#39;</code>
           </td>
@@ -2403,7 +2449,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>x axis scale. Can be <code>linear</code>, <code>log</code>, <code>symlog</code>, <code>logit</code>. Defaults to 'linear'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>x axis scale. Can be <code>linear</code>, <code>log</code>, <code>symlog</code>, <code>logit</code>. Defaults to 'linear'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;linear&#39;</code>
           </td>
@@ -2413,7 +2463,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>y axis scale. Can be <code>linear</code>, <code>log</code>, <code>symlog</code>, <code>logit</code>. Defaults to 'linear'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>y axis scale. Can be <code>linear</code>, <code>log</code>, <code>symlog</code>, <code>logit</code>. Defaults to 'linear'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;linear&#39;</code>
           </td>
@@ -2423,7 +2477,11 @@ example.plot()
           <td>
                 <code>int</code>
           </td>
-          <td><p>Max integrations per line of streamlines. Defaults to 500.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Max integrations per line of streamlines. Defaults to 500.</p>
+            </div>
+          </td>
           <td>
                 <code>500</code>
           </td>
@@ -2433,7 +2491,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>Selects integration method, by default uses scipy.odeint. <code>euler</code> and <code>rungekutta3</code> are also available. Defaults to "scipy".</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Selects integration method, by default uses scipy.odeint. <code>euler</code> and <code>rungekutta3</code> are also available. Defaults to "scipy".</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;scipy&#39;</code>
           </td>
@@ -2588,7 +2650,11 @@ example.plot()
           <td>
                 <code>float</code>
           </td>
-          <td><p>Precision if not specific axis precision is specified. Defaults to 0.01.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Precision if not specific axis precision is specified. Defaults to 0.01.</p>
+            </div>
+          </td>
           <td>
                 <code>0.01</code>
           </td>
@@ -2598,7 +2664,11 @@ example.plot()
           <td>
                 <code>float</code>
           </td>
-          <td><p>Precision for x axis nullcline. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Precision for x axis nullcline. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2608,7 +2678,11 @@ example.plot()
           <td>
                 <code>float</code>
           </td>
-          <td><p>Precision for y axis nullcline. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Precision for y axis nullcline. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2618,7 +2692,11 @@ example.plot()
           <td>
                 <code>Literal[&#39;x&#39;, &#39;y&#39;, None], optinal) </code>
           </td>
-          <td><p>Used to show only x or y nullclines, both if None. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Used to show only x or y nullclines, both if None. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2628,7 +2706,11 @@ example.plot()
           <td>
                 <code>float</code>
           </td>
-          <td><p>Specifies the value in which the countours will be drawn. Defaults to 0.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Specifies the value in which the countours will be drawn. Defaults to 0.</p>
+            </div>
+          </td>
           <td>
                 <code>0.0</code>
           </td>
@@ -2638,7 +2720,11 @@ example.plot()
           <td>
                 <code>int</code>
           </td>
-          <td><p>Density of grid used in interpolation. Defaults to 50.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Density of grid used in interpolation. Defaults to 50.</p>
+            </div>
+          </td>
           <td>
                 <code>50</code>
           </td>
@@ -2648,7 +2734,11 @@ example.plot()
           <td>
                 <code>list[float]</code>
           </td>
-          <td><p>Range of x nullcline, by default global range. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Range of x nullcline, by default global range. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2658,7 +2748,11 @@ example.plot()
           <td>
                 <code>list[float]</code>
           </td>
-          <td><p>Range of y nullcline, by default global range. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Range of y nullcline, by default global range. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2668,7 +2762,11 @@ example.plot()
           <td>
                 <code>dict</code>
           </td>
-          <td><p>Overrides general <code>dFargs</code> if is not None. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Overrides general <code>dFargs</code> if is not None. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2678,7 +2776,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>Color for x nullcline. Defaults to 'r'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Color for x nullcline. Defaults to 'r'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;r&#39;</code>
           </td>
@@ -2688,7 +2790,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>Color for y nullcline. Defaults to 'g'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Color for y nullcline. Defaults to 'g'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;g&#39;</code>
           </td>
@@ -2698,7 +2804,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>Color for background. Defaults to 'w'.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Color for background. Defaults to 'w'.</p>
+            </div>
+          </td>
           <td>
                 <code>&#39;w&#39;</code>
           </td>
@@ -2708,7 +2818,11 @@ example.plot()
           <td>
                 <code>int</code>
           </td>
-          <td><p>Alpha of nullclines and background. Defaults to 0.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Alpha of nullclines and background. Defaults to 0.</p>
+            </div>
+          </td>
           <td>
                 <code>0</code>
           </td>
@@ -2797,7 +2911,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>It takes the name of the parameter on which the slider will be defined. Must be the same as the one appearing as karg in the <code>dF</code> function.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>It takes the name of the parameter on which the slider will be defined. Must be the same as the one appearing as karg in the <code>dF</code> function.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -2807,7 +2925,11 @@ example.plot()
           <td>
                 <code>float</code>
           </td>
-          <td><p>Initial value of <em>param_name</em> variable. Default value is 0.5.   </p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Initial value of <em>param_name</em> variable. Default value is 0.5.   </p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2817,7 +2939,11 @@ example.plot()
           <td>
                 <code>flaot</code>
           </td>
-          <td><p>Slider step value. Default value is 0.1.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Slider step value. Default value is 0.1.</p>
+            </div>
+          </td>
           <td>
                 <code>0.1</code>
           </td>
@@ -2826,7 +2952,11 @@ example.plot()
           <td><code>valinterval</code></td>
           <td>
           </td>
-          <td><p>(float|list[float], optional): Slider range. Default value is [-10, 10].</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>(float|list[float], optional): Slider range. Default value is [-10, 10].</p>
+            </div>
+          </td>
           <td>
                 <code>10</code>
           </td>
@@ -2903,7 +3033,11 @@ example.plot()
           <td>
                 <code>bool</code>
           </td>
-          <td><p>If <code>True</code> colorbar is visible. Defaults to True.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>If <code>True</code> colorbar is visible. Defaults to True.</p>
+            </div>
+          </td>
           <td>
                 <code>True</code>
           </td>
@@ -2972,7 +3106,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>Matplotlib <code>Cmap</code>.. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Matplotlib <code>Cmap</code>.. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -2982,7 +3120,11 @@ example.plot()
           <td>
                 <code>bool</code>
           </td>
-          <td><p>Overrides general configuration of grid. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Overrides general configuration of grid. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -3003,7 +3145,11 @@ example.plot()
           <td>
                 <code>matplotlib.<span title="matplotlib.Streamplot">Streamplot</span></code>
           </td>
-          <td><p>Streamplot drawn.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Streamplot drawn.</p>
+            </div>
+          </td>
         </tr>
     </tbody>
   </table>
@@ -3141,7 +3287,11 @@ example.plot()
           <td>
                 <code>str</code>
           </td>
-          <td><p>Matplotlib <code>Cmap</code>. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Matplotlib <code>Cmap</code>. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -3151,7 +3301,11 @@ example.plot()
           <td>
                 <code>bool</code>
           </td>
-          <td><p>Overrides general configuration of grid. Defaults to None.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Overrides general configuration of grid. Defaults to None.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -3172,7 +3326,11 @@ example.plot()
           <td>
                 <code>Figure, Axes</code>
           </td>
-          <td><p>returns the figure and axes in which the streamplot was drawn.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>returns the figure and axes in which the streamplot was drawn.</p>
+            </div>
+          </td>
         </tr>
     </tbody>
   </table>
@@ -3299,10 +3457,10 @@ example.plot()
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>

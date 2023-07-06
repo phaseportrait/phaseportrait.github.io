@@ -21,7 +21,7 @@
         <link rel="next" href="../../trajectories/rungekutta/">
       
       <link rel="icon" href="../../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -118,25 +118,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
           
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
+              </label>
+            
           
-        
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -1682,7 +1688,12 @@ limitations under the License. -->
 <span class="normal">119</span>
 <span class="normal">120</span>
 <span class="normal">121</span>
-<span class="normal">122</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Streamlines_Velocity_Color_Gradient</span><span class="p">:</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Streamlines_Velocity_Color_Gradient</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Streamlines</span>
 <span class="sd">    --------</span>
@@ -1720,9 +1731,10 @@ limitations under the License. -->
         <span class="n">vmin</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">for</span> <span class="n">streamline</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stream_base</span><span class="o">.</span><span class="n">streamlines</span><span class="p">:</span>
-            <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">streamline</span>
-            <span class="n">vmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="p">([</span><span class="n">vmax</span><span class="p">]</span> <span class="k">if</span> <span class="n">vmax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]))</span>
-            <span class="n">vmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="p">([</span><span class="n">vmin</span><span class="p">]</span> <span class="k">if</span> <span class="n">vmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]))</span>
+            <span class="k">if</span> <span class="n">streamline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">streamline</span>
+                <span class="n">vmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">v</span><span class="p">,</span> <span class="p">([</span><span class="n">vmax</span><span class="p">]</span> <span class="k">if</span> <span class="n">vmax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]))))</span>
+                <span class="n">vmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">v</span><span class="p">,</span> <span class="p">([</span><span class="n">vmin</span><span class="p">]</span> <span class="k">if</span> <span class="n">vmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]))))</span>
 
         <span class="k">return</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
 
@@ -1748,8 +1760,12 @@ limitations under the License. -->
         <span class="n">arrow_kw</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="n">arrowstyle</span><span class="p">,</span> <span class="n">mutation_scale</span><span class="o">=</span><span class="mi">10</span> <span class="o">*</span> <span class="n">arrowsize</span><span class="p">)</span>
 
         <span class="k">for</span> <span class="n">streamline</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stream_base</span><span class="o">.</span><span class="n">streamlines</span><span class="p">:</span>
-            <span class="o">*</span><span class="n">coords</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">streamline</span>
-            <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">proyection</span><span class="o">==</span><span class="s2">&quot;2d&quot;</span> <span class="k">else</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">streamline</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">coords</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">streamline</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">proyection</span><span class="o">==</span><span class="s2">&quot;2d&quot;</span> <span class="k">else</span> <span class="mi">3</span><span class="p">)</span>
             <span class="n">segments</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">points</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">:]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
             <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">points</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
@@ -1817,7 +1833,11 @@ limitations under the License. -->
           <td>
                 <code>list, list[list]</code>
           </td>
-          <td><p>arrays of the grid points. The mesh spacing is assumed to be uniform in each dimension.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>arrays of the grid points. The mesh spacing is assumed to be uniform in each dimension.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -1827,7 +1847,11 @@ limitations under the License. -->
           <td>
                 <code>list, list[list]</code>
           </td>
-          <td><p>arrays of the grid points. The mesh spacing is assumed to be uniform in each dimension.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>arrays of the grid points. The mesh spacing is assumed to be uniform in each dimension.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -1837,7 +1861,11 @@ limitations under the License. -->
           <td>
                 <code>int default=500</code>
           </td>
-          <td><p>The maximum length of an individual streamline segment.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>The maximum length of an individual streamline segment.</p>
+            </div>
+          </td>
           <td>
                 <code>500</code>
           </td>
@@ -1847,7 +1875,11 @@ limitations under the License. -->
           <td>
                 <code>dict|None default=None) </code>
           </td>
-          <td><p>dF_args of <code>dF</code> function.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>dF_args of <code>dF</code> function.</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -1955,10 +1987,10 @@ limitations under the License. -->
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.tabs", "navigation.tracking", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
